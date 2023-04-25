@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        body {
+            background-color: #e09129 !important;
+        }
+        
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="bg-white bg-opacity-5 text-white shadow-lg hidden md:block">
+        <div class="container mx-auto flex items-center h-24">
+          <!-- <a href="#" class="flex items-center justify-center"> -->
+            
+            <img class="h-16" src="https://www.jamiesale-cartoonist.com/wp-content/uploads/dog-12.png" alt="" /><span class="ml-4 uppercase font-black">Welcome {{session.username}}</span>
+          </a>
+          <nav class="contents font-semibold text-base lg:text-lg">
+            <ul class="mx-auto flex items-center">
+              <li class="p-5 xl:p-8 active">
+                <a href="/main">
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="p-5 xl:p-8">
+                <a href="/about">
+                  <span>About</span>
+                </a>
+              </li>
+              <li class="p-5 xl:p-8">
+                <a href="/team">
+                  <span>Team</span>
+                </a>
+              </li>
+            </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </nav>
+          <button class="border border-white rounded-full font-bold px-8 py-2"><a href="{{ url_for('logout') }}">Logout</a></button> &nbsp;
+        </div>
+    </header>
+
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold mb-6 text-center">Dog Registration</h1>
+        <div style="display: grid; grid-template-columns: repeat(3, 20% 40% 40%);">
+          
+          <div>
+            <br><br>
+            <img style="height: 450px; margin-left: 20px;" src="../static/img/dog1.png" alt="dog">
+          </div>
+
+          <div>
+            <br>
+            <img style="height: 500px; margin-right: 100px;" src="../static/img/dogs3.png" alt="dog">
+          </div>
+
+          <div>
+
+            
+            <div class="msg" style="margin-left: 150px;">{{msg}}</div>
+
+            <form action="{{url_for('main')}}" method="post" enctype="multipart/form-data" class="w-full max-w-sm mx-auto bg-white p-6 rounded-md shadow-md">
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Owner Name</label>
+                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  type="text" id="owner_name" name="owner_name" placeholder="">
+              </div>
+              <!-- <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  type="email" id="email" name="email" placeholder="">
+              </div> -->
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Mobile</label>
+                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  type="text" id="mobile" name="mobile" placeholder="">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Dog Name</label>
+                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  type="text" id="dog_name" name="dog_name" placeholder="">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Dog Breed</label>
+                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  type="text" id="dog_breed" name="dog_breed" placeholder="">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Dog Image</label>
+                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                  type="file" id="dog_image" name="dog_image" placeholder="">
+              </div>
+              
+              <button
+                class="w-full bg-indigo-500 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
+                type="submit">Register</button>
+            </form>
+
+            
+          </div>
+
+          
+          
+
+
+
+          
+
+
+        </div>
+
+        
+
+
+        <!-- <br><br>
+
+        <div style="display: grid; grid-template-columns: repeat(3,1fr);">
+
+          <iframe width="500" height="280" src="https://www.youtube.com/embed/8xoNZINtR7s" title="a Portrait of My Dog on Her Birthday - Sony FX3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="500" height="280" src="https://www.youtube.com/embed/CUKrfKBxtOA" title="A Cinematic Dog Treat Commercial (SONY FX3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="500" height="280" src="https://www.youtube.com/embed/4dPAqEoKOa0" title="National Dog Show 2019: Best in Show (Full Judging) | NBC Sports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+        </div> -->
+      
+        
+      </div>
+
+    
+</body>
+</html>

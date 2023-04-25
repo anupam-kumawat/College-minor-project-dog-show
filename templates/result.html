@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        body {
+            background-color: #e09129 !important;
+        }
+        table{
+          background-color: #e09129;
+          margin-left: 50px;
+        }
+        tr, th, td{
+          padding: 15px;
+        }
+       
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="bg-white bg-opacity-5 text-white shadow-lg hidden md:block">
+        <div class="container mx-auto flex items-center h-24">
+          <!-- <a href="" class="flex items-center justify-center"> -->
+            <img class="h-16" src="https://www.jamiesale-cartoonist.com/wp-content/uploads/dog-12.png" alt="" />
+            <span class="ml-4 uppercase font-black">Welcome {{session.username}}</span>
+          </a>
+          <nav class="contents font-semibold text-base lg:text-lg">
+            <ul class="mx-auto flex items-center">
+                <li class="p-5 xl:p-8 active">
+                  <a href="/main">
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="p-5 xl:p-8">
+                  <a href="/about">
+                    <span>About</span>
+                  </a>
+                </li>
+                <li class="p-5 xl:p-8">
+                  <a href="/team">
+                    <span>Team</span>
+                  </a>
+                </li>
+              </ul>
+            
+          </nav>
+          <button class="border border-white rounded-full font-bold px-8 py-2"><a href="{{url_for('logout')}}">Logout</a></button> 
+        </div>
+    </header>
+        
+<body>
+    
+    <div class="container mx-auto py-8" style="text-align: center; justify-content: center; width: 750px;">
+        <h1 class="text-2xl font-bold mb-6 text-center">Dog Image Classifier</h1>
+
+        <table class="table table-striped;">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Owner Name</th>
+              <th>Mobile</th>
+              <th>Dog Name</th>
+              <th>Dog Breed</th>
+              <th>Dog Image</th>
+            </tr>
+          </thead>
+
+          {% for form in allDogs %}
+
+          <tr>
+            <td id="{{form.id}}">{{form.id}}</td>
+            <td id="{{form.owner_name}}">{{form.owner_name}}</td>
+            <td id="{{form.mobile}}">{{form.mobile}}</td>
+            <td id="{{form.dog_name}}">{{form.dog_name}}</td>
+            <td id="{{form.dog_breed}}">{{form.dog_breed}}</td>
+            <td id="{{form.dog_image}}"><img src={{form.dog_image}}  alt="dog"></td>
+          </tr>
+
+          {% endfor %}
+
+        </table>
+      </div>
+
+</body>
+        
+</html>

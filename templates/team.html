@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <style>
+        body {
+            background-color: #e09129 !important;
+        }
+        
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="bg-white bg-opacity-5 text-white shadow-lg hidden md:block">
+        <div class="container mx-auto flex items-center h-24">
+          <!-- <a href="" class="flex items-center justify-center"> -->
+            <img class="h-16" src="https://www.jamiesale-cartoonist.com/wp-content/uploads/dog-12.png" alt="" />
+            <span class="ml-4 uppercase font-black">Welcome {{session.username}}</span>
+          </a>
+          <nav class="contents font-semibold text-base lg:text-lg">
+            <ul class="mx-auto flex items-center">
+                <li class="p-5 xl:p-8 active">
+                  <a href="/main">
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="p-5 xl:p-8">
+                  <a href="/about">
+                    <span>About</span>
+                  </a>
+                </li>
+                <li class="p-5 xl:p-8">
+                  <a href="/team">
+                    <span>Team</span>
+                  </a>
+                </li>
+              </ul>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </nav>
+          <button class="border border-white rounded-full font-bold px-8 py-2"><a href="{{url_for('logout')}}">Logout</a></button> &nbsp;
+        </div>
+    </header>
+        
+<body>
+    
+    <div class="container mx-auto py-8" style="text-align: center;">
+      <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
+        Meet our awesome team members
+    </h1>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6" style="margin-left: 200px; margin-right: 200px;">
+        <div class="w-full h-60 bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <img class="object-center object-cover rounded-full h-36 w-36" src="../static/img/photostudio-4-designify.png" alt="photo">
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Anupam Kumawat</p>
+                <!-- <p class="text-base text-gray-400 font-normal">Software Engineer</p> -->
+            </div>
+        </div>
+        <div class="w-full h-60 bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <img class="object-center object-cover rounded-full h-36 w-36" src="../static/img/varun.png" alt="photo">
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Varun Sharma</p>
+                <!-- <p class="text-base text-gray-400 font-normal">Graphic Designer</p> -->
+            </div>
+        </div>
+        <div class="w-full h-60 bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <img class="object-center object-cover rounded-full h-36 w-36" src="../static/img/aryan.png" alt="photo">
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Aryan Ajmera</p>
+                <!-- <p class="text-base text-gray-400 font-normal">Dev Ops</p> -->
+            </div>
+        </div>
+        <div class="w-full h-60 bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <img class="object-center object-cover rounded-full h-36 w-36" src="../static/img/anuvansh.png" alt="photo">
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Anuvansh Singh</p>
+                <!-- <p class="text-base text-gray-400 font-normal">Software Engineer</p> -->
+            </div>
+        </div>
+        
+      </div>
+</section>
+
+</body>
+        
+</html>
